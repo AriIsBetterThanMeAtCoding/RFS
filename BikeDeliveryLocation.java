@@ -1,5 +1,5 @@
 
-public class BikeDeliveryLocation {
+public class BikeDeliveryLocation extends Leg {
     private String name = "";
     public BikeDeliveryLocation() {
         
