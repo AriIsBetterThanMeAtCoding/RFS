@@ -1,11 +1,10 @@
 
-public class BikeDeliveryLocation extends Leg {
-    private String name = "";
+public class BikeDeliveryLocation extends Location {
     public BikeDeliveryLocation() {
-        
+        super("NONAMEBIKEDELIVERYLOCATION");
     }
     
     public BikeDeliveryLocation(String n) {
-        name = n;
+        super(n);
     }
 }

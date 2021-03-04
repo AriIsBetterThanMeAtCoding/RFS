@@ -3,7 +3,7 @@ public class Airport extends Location{
     
 
     public Airport() {
-        super("NONAME");
+        super("NONAMEAIRPORT");
     }
     
     public Airport(String n) {
