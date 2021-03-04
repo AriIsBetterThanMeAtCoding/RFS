@@ -6,4 +6,11 @@ public abstract class Leg {
     int distance =0;
     double costPerKm = 0;
     
+    public Leg (Location origin, Location destination, int distanceInKm, String days) {
+        this.origin=origin;
+        this.destination=destination;
+        distance = distanceInKm;
+        daysAvailable=days;
+    }
+    
 }
