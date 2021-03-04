@@ -1,27 +1,26 @@
-
-public class Location {
+import java.util.*;
     
-public class abstract Location {
-    String name;
-    ArrayList<Leg> connectingLegs = new ArrayList<Leg>();
+public abstract class Location {
+    private String name;
+    private ArrayList<Leg> connectingLegs = new ArrayList<Leg>();
     
-    public Location (String n) {
+    public Location(String n) {
         name = n;
     }
     
-    public addConnection (Leg l) {
+    public void addConnection (Leg l) {
         connectingLegs.add(l);
     }
     
-    public cheapestRouteTo(Location loc, String day) {
-        
+    public Route cheapestRouteTo(Location loc, String day) {
+        return null;
     }
     
-    public minStepsRouteTo(Location loc, String day) {
-        
+    public Route minStepsRouteTo(Location loc, String day) {
+        return null;
     }
     
-    public shortestKmRouteTo(Location loc, String day) {
-        
+    public Route shortestKmRouteTo(Location loc, String day) {
+        return null;
     }
 } // Location
