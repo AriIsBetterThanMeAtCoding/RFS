@@ -7,7 +7,7 @@ public class BikeLeg extends Leg {
     
     
     
-    Public BikeLeg(Location origin, Locaiton destination, int distanceInKm, String days) {
+    public BikeLeg(Location origin, Location destination, int distanceInKm, String days) {
         o=origin;
         d=destination;
         di = distance;
