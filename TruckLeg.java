@@ -11,5 +11,6 @@ public class TruckLeg {
         o=origin;
         d=destination;
         di = distance;
+        day=days;
     }
 }
