@@ -1,6 +1,7 @@
+import java.util.ArrayList;
 
 public class Route {
-    ArrayList<Legs> = new ArrayList<Legs>();
+    ArrayList<Leg> legs = new ArrayList<Leg>();
     
     public double totalCost() {
         
