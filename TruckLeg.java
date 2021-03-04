@@ -2,7 +2,7 @@
 public class TruckLeg extends Leg {
     Location o = new Location();
     Location d = new Location();
-    int di=0;
+    int di = 0;
     String day = "";
     
     

@@ -1,4 +1,4 @@
 
-public class TruckDepot {
-
+public class TruckDepot extends Location{
+    
 }
