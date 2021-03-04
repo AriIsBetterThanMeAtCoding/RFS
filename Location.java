@@ -14,7 +14,7 @@ public abstract class Location {
     
     public void addConnection (Leg l) {
         connectingLegs.add(l);
-    }
+    } // addConnection
     
     public Route cheapestRouteTo(Location loc, String day) {
         return null;
