@@ -1,5 +1,5 @@
 
-public class BikeLeg {
+public class BikeLeg extends Leg {
     Location o = new Location();
     Location d = new Location();
     int di=0;
