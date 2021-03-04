@@ -5,6 +5,6 @@ public class Airport {
     // another test // Happy
     // happy maybe?
     public Airport() {
-        
+        System.out.println("Hi");
     }
 }
