@@ -7,10 +7,10 @@ public class Flight {
     
     
     
-    Public BikeLeg(Location origin, Locaiton destination, int distanceInKm, String days) {
+    public Flight(Location origin, Location destination, int distanceInKm, String days) {
         o=origin;
         d=destination;
-        di = distance;
+        di = distanceInKm;
         day=days;
     }
 }
