@@ -21,4 +21,12 @@ public abstract class Leg {
         return destination;
     }
     
+    public String getDaysAvailable() {
+        return daysAvailable;
+    }
+    
+    public int getDistance() {
+        return distance;
+    }
+    
 }
