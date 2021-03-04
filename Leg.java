@@ -6,5 +6,10 @@ public abstract class Leg {
     int distance =0;
     double costPerKm = 0;
     
-    
+    public Leg() {
+        o=origin;
+        d=destination;
+        di = distance;
+        day=days;
+    }
 }

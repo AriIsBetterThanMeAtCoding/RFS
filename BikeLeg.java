@@ -12,5 +12,6 @@ public class BikeLeg extends Leg {
         d=destination;
         di = distance;
         day=days;
+
     }
 }
