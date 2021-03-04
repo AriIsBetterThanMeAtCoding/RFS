@@ -13,4 +13,12 @@ public abstract class Leg {
         daysAvailable=days;
     }
     
+    public Location getOrigin() {
+        return origin;
+    }
+    
+    public Location getDestination() {
+        return destination;
+    }
+    
 }
