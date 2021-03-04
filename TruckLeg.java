@@ -7,10 +7,10 @@ public class TruckLeg extends Leg {
     
     
     
-    Public BikeLeg(Location origin, Locaiton destination, int distanceInKm, String days) {
+    public TruckLeg(Location origin, Location destination, int distanceInKm, String days) {
         o=origin;
         d=destination;
-        di = distance;
+        di = distanceInKm;
         day=days;
     }
 }
