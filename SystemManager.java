@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class SystemManager {
+public abstract class SystemManager {
     ArrayList<Location> locations = new ArrayList<Location>();
     ArrayList<Leg> legs = new ArrayList<Leg>();
     
@@ -23,5 +23,16 @@ public class SystemManager {
         
     }
     
+    public void printSystemDetails() {
+        String output = "";
+        output += "Legs:\n";
+        for(Leg l: legs) {
+            output += l + ", Available on: " + l.getDaysAvailable() + "\n";
+        }
+        output += "\nLocations:\n";
+        for(Location loc: locations) {
+            output += loc + "\n";
+        }
+    }
     
 }

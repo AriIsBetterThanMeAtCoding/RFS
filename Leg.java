@@ -33,4 +33,8 @@ public abstract class Leg {
     public double getCostPerKm() {
         return costPerKm;
     }
+    
+    public String toString() {
+        return "Origin: " + origin + " Destination: " + destination;
+    }
 }
