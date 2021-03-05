@@ -22,9 +22,7 @@ public class SystemManager {
         
     }
     public void findMinStepsRoute (Location origin, Location destination, String day) {
-        for() {
-            
-        }
+        
     }
     public void findShortestKmRoute (Location origin, Location destination, String day) {
         
