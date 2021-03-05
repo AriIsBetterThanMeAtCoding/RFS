@@ -7,6 +7,7 @@ public abstract class SystemManager {
     public void addLocation(Location l) {
         locations.add(l);
     }
+    
     public void addLeg(Leg l) {
         legs.add(l);
     }
@@ -19,17 +20,10 @@ public abstract class SystemManager {
         }
         return null;
     }
-    public void findCheapestRoute (Location origin, Location destination, String day) {
-        
-    }
-    public void findMinStepsRoute (Location origin, Location destination, String day) {
-        for() {
-            
-        } 
-    }
-    public void findShortestKmRoute (Location origin, Location destination, String day) {
-        
-    }
+    
+    public abstract void findCheapestRoute (Location origin, Location destination, String day);
+    public abstract void findMinStepsRoute (Location origin, Location destination, String day);
+    public abstract void findShortestKmRoute (Location origin, Location destination, String day);
     
     public void printSystemDetails() {
         String output = "";
