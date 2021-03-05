@@ -1,17 +1,12 @@
 import java.util.ArrayList;
 
-public abstract class SystemManager {
+public class SystemManager {
     ArrayList<Location> locations = new ArrayList<Location>();
     ArrayList<Leg> legs = new ArrayList<Leg>();
     
-<<<<<<< HEAD
-    // Postconditions: adds given location to locations
-=======
     public SystemManager() {
         
     }
-    
->>>>>>> branch 'main' of https://github.com/AriIsBetterThanMeAtCoding/RFS
     public void addLocation(Location l) {
         locations.add(l);
     }
@@ -31,9 +26,15 @@ public abstract class SystemManager {
         return null;
     }
     
-    public abstract Route findCheapestRoute (Location origin, Location destination, String day);
-    public abstract Route findMinStepsRoute (Location origin, Location destination, String day);
-    public abstract Route findShortestKmRoute (Location origin, Location destination, String day);
+    public Route findCheapestRoute (Location origin, Location destination, String day) {
+        return origin.cheapestRouteTo(destination, day);
+    }
+    public Route findMinStepsRoute (Location origin, Location destination, String day) {
+        return origin.minStepsRouteTo(destination, day);
+    }
+    public Route findShortestKmRoute (Location origin, Location destination, String day) {
+        return origin.shortestKmRouteTo(destination, day);
+    }
     
     // Postconditions: prints all legs and their available days
     // and all the locations
