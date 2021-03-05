@@ -17,7 +17,7 @@ public abstract class Location {
     } // addConnection
     
     public Route cheapestRouteTo(Location loc, String day) {
-        return null;
+        
     }
     
     public Route minStepsRouteTo(Location loc, String day) {
