@@ -16,14 +16,21 @@ public class SystemManager {
                 return locations.get(i);
             }
         }
+        return null;
     }
     public void findCheapestRoute (Location origin, Location destination, String day) {
         
     }
     public void findMinStepsRoute (Location origin, Location destination, String day) {
-        
+        for() {
+            
+        }
     }
     public void findShortestKmRoute (Location origin, Location destination, String day) {
+        
+    }
+    public void printSystemDetails() {
+        // TODO Auto-generated method stub
         
     }
     
