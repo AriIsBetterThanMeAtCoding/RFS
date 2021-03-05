@@ -5,10 +5,10 @@ public class SystemManager {
     ArrayList<Leg> legs = new ArrayList<Leg>();
     
     public void addLocation(Location l) {
-        
+        locations.add(l);
     }
     public void addLeg(Leg l) {
-        
+        legs.add(l);
     }
     public void findLocation(String name) {
         
