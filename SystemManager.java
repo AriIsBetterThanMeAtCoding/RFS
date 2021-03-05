@@ -7,6 +7,7 @@ public class SystemManager {
     public SystemManager() {
         
     }
+    
     public void addLocation(Location l) {
         locations.add(l);
     }
