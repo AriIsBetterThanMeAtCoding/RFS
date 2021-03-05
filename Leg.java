@@ -1,16 +1,16 @@
 
 public abstract class Leg {
-    Location origin = new Location();
-    Location destination = new Location();
+    Location origin;
+    Location destination;
     String daysAvailable = "";
     int distance =0;
     double costPerKm = 0;
     
     public Leg (Location origin, Location destination, int distanceInKm, String days) {
-        this.origin=origin;
-        this.destination=destination;
+        this.origin = origin;
+        this.destination = destination;
         distance = distanceInKm;
-        daysAvailable=days;
+        daysAvailable = days;
     }
     
     public Location getOrigin() {
