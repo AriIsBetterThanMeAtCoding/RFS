@@ -30,4 +30,7 @@ public abstract class Leg {
         return distance;
     }
     
+    public double getCostPerKm() {
+        return costPerKm;
+    }
 }
