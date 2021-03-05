@@ -4,7 +4,14 @@ public abstract class SystemManager {
     ArrayList<Location> locations = new ArrayList<Location>();
     ArrayList<Leg> legs = new ArrayList<Leg>();
     
+<<<<<<< HEAD
     // Postconditions: adds given location to locations
+=======
+    public SystemManager() {
+        
+    }
+    
+>>>>>>> branch 'main' of https://github.com/AriIsBetterThanMeAtCoding/RFS
     public void addLocation(Location l) {
         locations.add(l);
     }
