@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public interface SystemManager {
+public class SystemManager {
     ArrayList<Location> locations = new ArrayList<Location>();
     ArrayList<Leg> legs = new ArrayList<Leg>();
     
