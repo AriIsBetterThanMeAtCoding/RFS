@@ -12,6 +12,7 @@ public abstract class Location {
         name = n;
     }
     
+    // adds a leg connecting to location
     public void addConnection (Leg l) {
         connectingLegs.add(l);
     } // addConnection
