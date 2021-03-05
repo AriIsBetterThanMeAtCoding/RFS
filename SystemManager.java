@@ -20,19 +20,10 @@ public abstract class SystemManager {
         }
         return null;
     }
-    public void findCheapestRoute (Location origin, Location destination, String day) {
-        
-    }
-    public void findMinStepsRoute (Location origin, Location destination, String day) {
-
-    }
-    public void findShortestKmRoute (Location origin, Location destination, String day) {
-        
-    }
     
-    public abstract void findCheapestRoute (Location origin, Location destination, String day);
-    public abstract void findMinStepsRoute (Location origin, Location destination, String day);
-    public abstract void findShortestKmRoute (Location origin, Location destination, String day);
+    public abstract Route findCheapestRoute (Location origin, Location destination, String day);
+    public abstract Route findMinStepsRoute (Location origin, Location destination, String day);
+    public abstract Route findShortestKmRoute (Location origin, Location destination, String day);
     
     public void printSystemDetails() {
         String output = "";
