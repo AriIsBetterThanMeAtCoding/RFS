@@ -12,29 +12,29 @@ public abstract class Leg {
         distance = distanceInKm;
         daysAvailable = days;
         costPerKm = cost;
-    }
+    } // Leg
     
     public Location getOrigin() {
         return origin;
-    }
+    } // getOrigin
     
     public Location getDestination() {
         return destination;
-    }
+    } // getDestination
     
     public String getDaysAvailable() {
         return daysAvailable;
-    }
+    } // getDaysAvailable
     
     public int getDistance() {
         return distance;
-    }
+    } // getDistance
     
     public double getCostPerKm() {
         return costPerKm;
-    }
+    } // getCostPerKm
     
     public String toString() {
         return "Origin: " + origin + " Destination: " + destination;
-    }
-}
+    } // toString
+} // Leg

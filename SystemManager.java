@@ -4,6 +4,10 @@ public abstract class SystemManager {
     ArrayList<Location> locations = new ArrayList<Location>();
     ArrayList<Leg> legs = new ArrayList<Leg>();
     
+    public SystemManager() {
+        
+    }
+    
     public void addLocation(Location l) {
         locations.add(l);
     }
