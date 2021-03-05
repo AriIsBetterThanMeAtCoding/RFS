@@ -21,11 +21,11 @@ public abstract class Location {
     }
     
     public Route minStepsRouteTo(Location loc, String day) {
-        return null;
+        
     }
     
     public Route shortestKmRouteTo(Location loc, String day) {
-        return null;
+        
     }
     
     public String getName() {
