@@ -37,9 +37,9 @@ public abstract class Location {
         
         double minCost = Double.MAX_VALUE;
         int minIndex = -1;
+        
         for(int i = 0; i < possRoutes.size() - 1; i++) {
             double thisCost = possRoutes.get(i).totalCost();
-            
             
             if (thisCost < minCost) {
                 minCost = thisCost;
