@@ -35,8 +35,14 @@ public class Route{
     }
     
     // Postconditions: returns copy of this route
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    public Route clone() {
+        Route temp = new Route ();
+        
+        for(int i = 0; i < legs.size(); i++) {
+            temp.addLeg(legs.get(i));
+        }
+        
+        return temp;
     }
     
     public boolean legInRoute(Leg leg) {

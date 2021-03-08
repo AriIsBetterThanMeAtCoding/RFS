@@ -25,14 +25,7 @@ public abstract class Location {
         
         for(int i = 0; i < connectingLegs.size(); i++) {
             if(connectingLegs.get(i).getDaysAvailable().contains(day)) {
-                Route temp = null;
-                
-                try {
-                    temp = (Route)current.clone();
-                } catch (Exception e) {
-                    System.out.println("Clone Failed");
-                    System.exit(0);
-                }
+                Route temp = (Route)current.clone();
                 Leg currentLeg = connectingLegs.get(i);
                 
                 if(!current.legInRoute(currentLeg)) {
