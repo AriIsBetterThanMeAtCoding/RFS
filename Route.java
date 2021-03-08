@@ -29,8 +29,14 @@ public class Route{
         return legs.size();
     }
     
-    // Postconidtions: adds leg to route
+    // Postconditions: adds leg to route
     public void addLeg(Leg leg) {
         legs.add(leg);
     }
+    
+    // Postconditions: returns copy of this route
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+    
 }
