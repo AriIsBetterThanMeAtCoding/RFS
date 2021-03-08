@@ -29,7 +29,8 @@ public class SystemManager {
     }
     
     public Route findCheapestRoute (Location origin, Location destination, String day) {
-        return origin.cheapestRouteTo(destination, day);
+        Route routes = new Route();
+        return origin.cheapestRouteTo(destination, day, routes);
     }
     public Route findMinStepsRoute (Location origin, Location destination, String day) {
         return origin.minStepsRouteTo(destination, day);
