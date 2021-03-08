@@ -15,6 +15,7 @@ public class SystemManager {
     // Postconditions: adds given leg to legs
     public void addLeg(Leg l) {
         legs.add(l);
+        l.getOrigin().addConnection(l);
     }
     
     // Postconditions: returns locations with given name
