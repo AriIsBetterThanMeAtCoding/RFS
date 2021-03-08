@@ -17,7 +17,8 @@ public abstract class Location {
         connectingLegs.add(l);
     } // addConnection
     
-    public Route cheapestRouteTo(Location loc, String day) {
+    public Route cheapestRouteTo(Location loc, String day, Route current) {
+        /*
         int [] temp1 = used.clone();
         int [] temp2 = used.clone();
         
@@ -39,7 +40,21 @@ public abstract class Location {
         } else {
             return temp2;
         } // else
-    }
+        */
+        
+        
+        for(int i = 0; i < connectingLegs.size(); i++) {
+            if(connectingLegs.get(i).getDaysAvailable().contains(day)) {
+                try {
+                    Route temp = (Route)current.clone();
+                    if(current)
+                } catch (Exception e) {
+                    System.out.println("clone failed");
+                    System.exit(0);
+                } // catch
+            } // if
+        } // for
+    } // cheapestRouteTo
     
     public Route minStepsRouteTo(Location loc, String day) {
         
