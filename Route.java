@@ -47,6 +47,7 @@ public class Route{
     
     public boolean legInRoute(Leg leg) {
         if(this.legs.contains(leg)) {
+            
             return true;
         }
         return false;

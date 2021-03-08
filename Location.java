@@ -20,7 +20,7 @@ public abstract class Location {
     public Route cheapestRouteTo(Location loc, String day, Route current) {
 
         
-        ArrayList<Route> possRoots = new ArrayList<Route>();
+        ArrayList<Route> possRoutes = new ArrayList<Route>();
 
         
         for(int i = 0; i < connectingLegs.size(); i++) {
@@ -29,7 +29,7 @@ public abstract class Location {
                 Leg currentLeg = connectingLegs.get(i);
                 
                 if(!current.legInRoute(currentLeg)) {
-                    possRoots.add(currentLeg.getDestination().cheapestRouteTo(loc, day, temp));
+                    possRoutes.add(currentLeg.getDestination().cheapestRouteTo(loc, day, temp));
                 } // if
                 
             } // if
@@ -37,9 +37,9 @@ public abstract class Location {
         
         double minCost = Double.MAX_VALUE;
         int minIndex = -1;
-        
-        for(int i = 0; i < possRoots.size() - 1; i++) {
-            double thisCost = possRoots.get(i).totalCost();
+        for(int i = 0; i < possRoutes.size() - 1; i++) {
+            double thisCost = possRoutes.get(i).totalCost();
+            
             
             if (thisCost < minCost) {
                 minCost = thisCost;
@@ -47,7 +47,7 @@ public abstract class Location {
             }
         } // for
         
-        return possRoots.get(minIndex);
+        return possRoutes.get(minIndex);
     } // cheapestRouteTo
     
     /*
