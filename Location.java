@@ -41,19 +41,33 @@ public abstract class Location {
             return temp2;
         } // else
         */
-        
+        ArrayList<Route> possRoots = new ArrayList<Route>();
         
         for(int i = 0; i < connectingLegs.size(); i++) {
             if(connectingLegs.get(i).getDaysAvailable().contains(day)) {
-                try {
-                    Route temp = (Route)current.clone();
-                    if(current)
-                } catch (Exception e) {
-                    System.out.println("clone failed");
-                    System.exit(0);
-                } // catch
+                Route temp = (Route)current.clone();
+                Leg currentLeg = connectingLegs.get(i);
+                
+                if(!current.legInRoute(currentLeg)) {
+                    possRoots.add(currentLeg.getDestination().cheapestRouteTo(loc, day, temp));
+                } // if
+                
             } // if
         } // for
+        
+        double minCost = Double.MAX_VALUE;
+        int minIndex = -1;
+        
+        for(int i = 0; i < possRoots.size() - 1; i++) {
+            double thisCost = possRoots.get(i).totalCost();
+            
+            if (thisCost < minCost) {
+                minCost = thisCost;
+                minIndex = i;
+            }
+        } // for
+        
+        return possRoots.get(minIndex);
     } // cheapestRouteTo
     
     public Route minStepsRouteTo(Location loc, String day) {
