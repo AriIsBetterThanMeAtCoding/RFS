@@ -39,4 +39,11 @@ public class Route{
         return super.clone();
     }
     
+    public boolean legInRoute(Leg leg) {
+        if(this.legs.contains(leg)) {
+            return true;
+        }
+        return false;
+    }
+    
 }
