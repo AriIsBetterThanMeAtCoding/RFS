@@ -18,7 +18,27 @@ public abstract class Location {
     } // addConnection
     
     public Route cheapestRouteTo(Location loc, String day) {
+        int [] temp1 = used.clone();
+        int [] temp2 = used.clone();
         
+        // base case
+        if(n == -1) return used;
+        
+        // skip over this item
+        temp1 = recursive(temp1, n - 1);
+        
+        // if possible, add this item to bag
+        if(used[n] < 2 && arrayWeight(used) + groceryItems[n].getWeight() < weightLimit) {
+            temp2[n]++;
+            temp2 = recursive(temp2, n);
+        } // if
+        
+        // return bag with most value
+        if(arrayCost(temp1) > arrayCost(temp2)) {
+            return temp1;
+        } else {
+            return temp2;
+        } // else
     }
     
     public Route minStepsRouteTo(Location loc, String day) {
