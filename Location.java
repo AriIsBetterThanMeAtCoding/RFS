@@ -20,7 +20,7 @@ public abstract class Location {
     public Route cheapestRouteTo(Location loc, String day) {
         int [] temp1 = used.clone();
         int [] temp2 = used.clone();
-        
+
         // base case
         if(n == -1) return used;
         
@@ -28,7 +28,7 @@ public abstract class Location {
         temp1 = recursive(temp1, n - 1);
         
         // if possible, add this item to bag
-        if(used[n] < 2 && arrayWeight(used) + groceryItems[n].getWeight() < weightLimit) {
+        if(arrayWeight(used) + groceryItems[n].getWeight() < weightLimit) {
             temp2[n]++;
             temp2 = recursive(temp2, n);
         } // if
