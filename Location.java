@@ -57,6 +57,7 @@ public abstract class Location {
         return possRoots.get(minIndex);
     } // cheapestRouteTo
     
+    /*
     public Route minStepsRouteTo(Location loc, String day) {
         
     }
@@ -64,6 +65,7 @@ public abstract class Location {
     public Route shortestKmRouteTo(Location loc, String day) {
         
     }
+    */
     
     public String getName() {
         return name;
