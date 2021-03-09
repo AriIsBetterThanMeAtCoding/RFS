@@ -52,7 +52,7 @@ public class TestDriver {
 
         System.out.println(""); 
 
-        // BikeDepot 1 to BikeDepot 3
+        //BikeDepot 1 to BikeDepot 3
         System.out.println("------- b1 to b3 ----------");
         Route r1 = sm.findCheapestRoute(sm.findLocation("BikeDepot1"), sm.findLocation("BikeDepot3"),"M");
         System.out.println("Cheapest: " + r1);
@@ -60,7 +60,7 @@ public class TestDriver {
         System.out.println("\n\nShortest Route:\n " + r2);
 
        
-        /*
+        
         // TruckDepot 4 to BikeDepot 1  NOT POSSIBLE
         System.out.println("------- 4 to 5 ----------");
         r1 = sm.findCheapestRoute(sm.findLocation("TRUCK004"), sm.findLocation("BikeDepot1"),"M");
@@ -68,7 +68,7 @@ public class TestDriver {
         System.out.println(r1);
         r2 = sm.findShortestKmRoute(sm.findLocation("TRUCK004"), sm.findLocation("BikeDepot1"), "M");
         System.out.println("\n\nShortest Route:\n " + r2);
-        */
+        
 
 
     }
