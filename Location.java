@@ -32,7 +32,7 @@ public abstract class Location {
                 Leg currentLeg = connectingLegs.get(i);
                 
                 //System.out.println("orig route:\n" + current);
-                //System.out.println("cloned route:\n" + temp);
+                // System.out.println("cloned route:\n" + temp);
                 
                 //System.out.println(currentLeg);
                 
