@@ -64,11 +64,11 @@ public class SystemManager {
         output += "Legs:\n";
         for (Leg l : legs) {
             output += l + ", Available on: " + l.getDaysAvailable() + "\n";
-        }
+        } // for
         output += "\nLocations:\n";
         for (Location loc : locations) {
             output += loc + "\n";
-        }
-    }
+        } // for
+    } // printSystemDetails
 
-}
+} // SystemManager
