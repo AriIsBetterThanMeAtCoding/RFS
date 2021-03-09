@@ -17,7 +17,7 @@ public abstract class Location {
         connectingLegs.add(l);
     } // addConnection
     
-    public Route findBestRouteTo(Location loc, String day, Route current, int func) {
+    public Route bestRouteTo(Location loc, String day, Route current, int func) {
         ArrayList<Route> possRoutes = new ArrayList<Route>();
         
         // base cases
@@ -33,7 +33,7 @@ public abstract class Location {
                 
                 if(!current.legInRoute(currentLeg)) { // if haven't been here before
                     temp.addLeg(currentLeg);
-                    Route newRoute = currentLeg.getDestination().findBestRouteTo(loc, day, temp, func);
+                    Route newRoute = currentLeg.getDestination().bestRouteTo(loc, day, temp, func);
                     
                     if(newRoute != null) possRoutes.add(newRoute);
                 } // if
