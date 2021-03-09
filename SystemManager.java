@@ -9,7 +9,13 @@ public class SystemManager {
     }
 
     public void addLocation(Location l) {
-        locations.add(l);
+        if(!locations.contains(l)) {
+            locations.add(l);
+        }else {
+            System.out.println("This Location Already Exists");
+            System.exit(0);
+        }
+        
     }
 
     // Postconditions: adds given leg to legs
