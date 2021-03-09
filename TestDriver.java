@@ -42,9 +42,9 @@ public class TestDriver {
        
         // Testing Error Checking
         //sm.addLeg(new Flight(b1, b2, 10, "MTW"));
-        sm.addLeg(new Flight(t1, t2, 10, "MTW"));
-        sm.addLeg(new Flight(b1, t2, 10, "MTW"));
-        sm.addLeg(new Flight(t1, b2, 10, "MTW"));
+        //sm.addLeg(new Flight(t1, t2, 10, "MTW"));
+        //sm.addLeg(new Flight(b1, t2, 10, "MTW"));
+        //sm.addLeg(new Flight(t1, b2, 10, "MTW"));
         
         
         
