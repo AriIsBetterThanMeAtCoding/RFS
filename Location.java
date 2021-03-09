@@ -20,8 +20,9 @@ public abstract class Location {
     public Route cheapestRouteTo(Location loc, String day, Route current) {
 
         ArrayList<Route> possRoutes = new ArrayList<Route>();
-
-        if(connectingLegs.size() == 0) return current;
+        
+        if(this.equals(loc)) return current;
+        if(connectingLegs.size() == 0) return null;
         
         for(int i = 0; i < connectingLegs.size(); i++) {
             //System.out.println("outside if: " + i);
@@ -38,7 +39,9 @@ public abstract class Location {
                 
                 if(!current.legInRoute(currentLeg)) {
                     temp.addLeg(currentLeg);
-                    possRoutes.add(currentLeg.getDestination().cheapestRouteTo(loc, day, temp));
+                    Route newRoute = currentLeg.getDestination().cheapestRouteTo(loc, day, temp);
+                    
+                    if(newRoute != null) possRoutes.add(newRoute);
                 } // if
                 
             } // if
@@ -77,5 +80,10 @@ public abstract class Location {
     
     public String toString() {
         return name;
+    }
+    
+    public boolean equals(Location loc) {
+        if(name.equals(loc.name)) return true;
+        return false;
     }
 } // Location
