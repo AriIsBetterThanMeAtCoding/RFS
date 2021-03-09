@@ -53,4 +53,14 @@ public class Route{
         return false;
     }
     
+    public String toString() {
+        String str = "";
+        
+        for(int i = 0; i < legs.size(); i++) {
+            str += legs.get(i) + "\n";
+        } // for
+        
+        return str;
+    }
+    
 }
