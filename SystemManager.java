@@ -32,7 +32,7 @@ public class SystemManager {
     // Post-Condition: returns the cheapest route from origin to destination
     public Route findCheapestRoute(Location origin, Location destination, String day) {
         Route routes = new Route();
-        return origin.cheapestRouteTo(destination, day, routes, 1);
+        return origin.BestRouteTo(destination, day, routes, 1);
     }
 
     // Pre-Condition: origin and destination are pre-existing locations
@@ -40,7 +40,7 @@ public class SystemManager {
     // least amount of legs
     public Route findMinStepsRoute(Location origin, Location destination, String day) {
         Route routes = new Route();
-        return origin.minStepsRouteTo(destination, day, routes, 2);
+        return origin.BestRouteTo(destination, day, routes, 2);
     }
 
     // Pre-Condition: origin and destination are pre-existing locations
@@ -48,7 +48,7 @@ public class SystemManager {
     // terms of distance
     public Route findShortestKmRoute(Location origin, Location destination, String day) {
         Route routes = new Route();
-        return origin.shortestKmRouteTo(destination, day, routes, 3);
+        return origin.BestRouteTo(destination, day, routes, 3);
     }
 
     // Postconditions: prints all legs and their available days
