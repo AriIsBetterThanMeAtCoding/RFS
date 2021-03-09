@@ -55,7 +55,7 @@ public class Route{
     
     public String toString() {
         String str = "";
-        
+        str += ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n";
         str += " Step: " + totalSteps() + " Distance: " + totalDistance() + " Cost: " + totalCost() + "\n";
         str += "Route Start: \n";
         
@@ -64,6 +64,7 @@ public class Route{
         } // for
         
         str += "Route End.";
+        str += "\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
         
         return str;
     }
