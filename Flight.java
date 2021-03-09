@@ -7,7 +7,7 @@ public class Flight extends Leg {
         boolean isValid = origin instanceof Airport && destination instanceof Airport;
 
         if (!isValid) {
-            System.out.println("Leg did not include the correct destination or origin");
+            System.out.println("Flight did not include the correct destination or origin. We Fly from Airport to Airport around these ends");
             System.exit(0);
         } // if 
     } // Flight
