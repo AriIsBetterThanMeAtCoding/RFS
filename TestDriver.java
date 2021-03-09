@@ -41,7 +41,9 @@ public class TestDriver {
         sm.addLeg(new Flight(a1, a2, 221, "MTWRFSU"));
        
         // Testing Error Checking
-        sm.addLeg(new Flight(b1, b2, 10, "MTW"));
+        System.out.println("here");
+        //sm.addLeg(new Flight(b1, b2, 10, "MTW"));
+        System.out.println("there");
         //sm.addLeg(new Flight(t1, t2, 10, "MTW"));
         //sm.addLeg(new Flight(b1, t2, 10, "MTW"));
         //sm.addLeg(new Flight(t1, b2, 10, "MTW"));
