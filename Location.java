@@ -24,9 +24,15 @@ public abstract class Location {
 
         
         for(int i = 0; i < connectingLegs.size(); i++) {
+            System.out.println("outside if: " + i);
             if(connectingLegs.get(i).getDaysAvailable().contains(day)) {
+                System.out.println("inside if: " + i);
+                
                 Route temp = (Route)current.clone();
                 Leg currentLeg = connectingLegs.get(i);
+                
+                System.out.println("orig route:\n" + current);
+                System.out.println("cloned route:\n" + temp);
                 
                 if(!current.legInRoute(currentLeg)) {
                     possRoutes.add(currentLeg.getDestination().cheapestRouteTo(loc, day, temp));
