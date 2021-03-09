@@ -56,9 +56,14 @@ public class Route{
     public String toString() {
         String str = "";
         
+        str += " Step: " + totalSteps() + " Distance: " + totalDistance() + " Cost: " + totalCost() + "\n";
+        str += "Route Start: \n";
+        
         for(int i = 0; i < legs.size(); i++) {
             str += legs.get(i) + "\n";
         } // for
+        
+        str += "Route End.";
         
         return str;
     }
