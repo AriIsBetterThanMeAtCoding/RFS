@@ -47,8 +47,8 @@ public abstract class Location {
             case 3: return shortestKmRouteTo(possRoutes);
             default: return null;
             
-        }
-    }
+        } // switch
+    } // bestRouteTo
     
     public Route cheapestRouteTo(ArrayList<Route> possRoutes) {
         double minCost = Double.MAX_VALUE;
@@ -61,7 +61,7 @@ public abstract class Location {
             if (thisCost < minCost) {
                 minCost = thisCost;
                 minIndex = i;
-            }
+            } // if
         } // for
         
         return possRoutes.get(minIndex);
@@ -78,11 +78,11 @@ public abstract class Location {
             if (thisSteps < minSteps) {
                 minSteps = thisSteps;
                 minIndex = i;
-            }
+            } // if
         } // for
         
         return possRoutes.get(minIndex);
-    }
+    } // minStepsRouteTo
     
     public Route shortestKmRouteTo(ArrayList<Route> possRoutes) {
         double minDist = Double.MAX_VALUE;
@@ -95,22 +95,22 @@ public abstract class Location {
             if (thisDist < minDist) {
                 minDist = thisDist;
                 minIndex = i;
-            }
+            } // if
         } // for
         
         return possRoutes.get(minIndex);
-    }
+    } // shortestKmRouteTo
     
     public String getName() {
         return name;
-    }
+    } // getName
     
     public String toString() {
         return name;
-    }
+    } // toString
     
     public boolean equals(Location loc) {
         if(name.equals(loc.name)) return true;
         return false;
-    }
+    } // equals
 } // Location
