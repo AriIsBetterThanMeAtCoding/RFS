@@ -10,6 +10,6 @@ public class TruckLeg extends Leg {
         if (!isValid) {
             System.out.println("Leg did not include the correct destination or origin");
             System.exit(0);
-        }
-    }
-}
+        } // if
+    } // TruckLeg
+} // Truckleg
