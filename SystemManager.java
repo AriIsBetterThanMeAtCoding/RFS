@@ -9,12 +9,13 @@ public class SystemManager {
     }
 
     public void addLocation(Location l) {
-        if(!locations.contains(l)) {
-            locations.add(l);
-        }else {
-            System.out.println("This Location Already Exists");
-            System.exit(0);
+        for(int i = 0; i<locations.size(); i++) {
+            if(locations.get(i).getName().equals(l.getName())) {
+                System.out.println("This Location Already Exists");
+                System.exit(0);
+            }
         }
+        locations.add(l);
         
     }
 
