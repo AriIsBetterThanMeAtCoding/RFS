@@ -17,11 +17,8 @@ public abstract class Location {
         connectingLegs.add(l);
     } // addConnection
     
-    public Route cheapestRouteTo(Location loc, String day, Route current) {
-
+    public Route findBestRouteTo(Location loc, String day, Route current, int func) {
         ArrayList<Route> possRoutes = new ArrayList<Route>();
-        double minCost = Double.MAX_VALUE;
-        int minIndex = -1;
         
         // base cases
         if(this.equals(loc)) return current; // arrived at destination
@@ -36,7 +33,7 @@ public abstract class Location {
                 
                 if(!current.legInRoute(currentLeg)) { // if haven't been here before
                     temp.addLeg(currentLeg);
-                    Route newRoute = currentLeg.getDestination().cheapestRouteTo(loc, day, temp);
+                    Route newRoute = currentLeg.getDestination().findBestRouteTo(loc, day, temp, func);
                     
                     if(newRoute != null) possRoutes.add(newRoute);
                 } // if
@@ -44,7 +41,19 @@ public abstract class Location {
             } // if
         } // for
         
-        
+        switch(func) {
+            case 1: return cheapestRouteTo(possRoutes);
+            case 2: return minStepsRouteTo(possRoutes);
+            case 3: return shortestKmRouteTo(possRoutes);
+            default: return null;
+            
+        }
+    }
+    
+    public Route cheapestRouteTo(ArrayList<Route> possRoutes) {
+        double minCost = Double.MAX_VALUE;
+        int minIndex = -1;
+
         // find cheapest possible route
         for(int i = 0; i < possRoutes.size(); i++) {
             double thisCost = possRoutes.get(i).totalCost();
@@ -58,15 +67,39 @@ public abstract class Location {
         return possRoutes.get(minIndex);
     } // cheapestRouteTo
     
-    /*
-    public Route minStepsRouteTo(Location loc, String day) {
+    public Route minStepsRouteTo(ArrayList<Route> possRoutes) {
+        double minSteps = Double.MAX_VALUE;
+        int minIndex = -1;
+
+        // find cheapest possible route
+        for(int i = 0; i < possRoutes.size(); i++) {
+            double thisSteps = possRoutes.get(i).totalSteps();
+            
+            if (thisSteps < minSteps) {
+                minSteps = thisSteps;
+                minIndex = i;
+            }
+        } // for
         
+        return possRoutes.get(minIndex);
     }
     
-    public Route shortestKmRouteTo(Location loc, String day) {
+    public Route shortestKmRouteTo(ArrayList<Route> possRoutes) {
+        double minDist = Double.MAX_VALUE;
+        int minIndex = -1;
+
+        // find cheapest possible route
+        for(int i = 0; i < possRoutes.size(); i++) {
+            double thisDist = possRoutes.get(i).totalDistance();
+            
+            if (thisDist < minDist) {
+                minDist = thisDist;
+                minIndex = i;
+            }
+        } // for
         
+        return possRoutes.get(minIndex);
     }
-    */
     
     public String getName() {
         return name;
