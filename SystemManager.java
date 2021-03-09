@@ -30,14 +30,16 @@ public class SystemManager {
     
     public Route findCheapestRoute (Location origin, Location destination, String day) {
         Route routes = new Route();
-        return origin.cheapestRouteTo(destination, day, routes);
+        return origin.cheapestRouteTo(destination, day, routes, 1);
     }
-    /*public Route findMinStepsRoute (Location origin, Location destination, String day) {
-        return origin.minStepsRouteTo(destination, day);
+    public Route findMinStepsRoute (Location origin, Location destination, String day) {
+        Route routes = new Route();
+        return origin.minStepsRouteTo(destination, day, routes, 2);
     }
     public Route findShortestKmRoute (Location origin, Location destination, String day) {
-        return origin.shortestKmRouteTo(destination, day);
-    }*/
+        Route routes = new Route();
+        return origin.shortestKmRouteTo(destination, day, routes, 3);
+    }
     
     // Postconditions: prints all legs and their available days
     // and all the locations
