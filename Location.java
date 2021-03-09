@@ -20,24 +20,21 @@ public abstract class Location {
     public Route cheapestRouteTo(Location loc, String day, Route current) {
 
         ArrayList<Route> possRoutes = new ArrayList<Route>();
+        double minCost = Double.MAX_VALUE;
+        int minIndex = -1;
         
-        if(this.equals(loc)) return current;
-        if(connectingLegs.size() == 0) return null;
+        // base cases
+        if(this.equals(loc)) return current; // arrived at destination
+        if(connectingLegs.size() == 0) return null; // arrived at dead end
         
+        // go through each connecting leg
         for(int i = 0; i < connectingLegs.size(); i++) {
-            //System.out.println("outside if: " + i);
             if(connectingLegs.get(i).getDaysAvailable().contains(day)) {
-                //System.out.println("inside if: " + i);
                 
                 Route temp = (Route)current.clone();
                 Leg currentLeg = connectingLegs.get(i);
                 
-                //System.out.println("orig route:\n" + current);
-                // System.out.println("cloned route:\n" + temp);
-                
-                //System.out.println(currentLeg);
-                
-                if(!current.legInRoute(currentLeg)) {
+                if(!current.legInRoute(currentLeg)) { // if haven't been here before
                     temp.addLeg(currentLeg);
                     Route newRoute = currentLeg.getDestination().cheapestRouteTo(loc, day, temp);
                     
@@ -47,11 +44,8 @@ public abstract class Location {
             } // if
         } // for
         
-        double minCost = Double.MAX_VALUE;
-        int minIndex = -1;
         
-        //System.out.println("size: " + possRoutes.size());
-        
+        // find cheapest possible route
         for(int i = 0; i < possRoutes.size(); i++) {
             double thisCost = possRoutes.get(i).totalCost();
             
