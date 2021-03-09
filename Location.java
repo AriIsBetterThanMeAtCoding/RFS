@@ -6,11 +6,11 @@ public abstract class Location {
     
     public Location() {
         name = "unspecified";
-    }
+    } // location
     
     public Location(String n) {
         name = n;
-    }
+    } // location
     
     // adds a leg connecting to location
     public void addConnection (Leg l) {
