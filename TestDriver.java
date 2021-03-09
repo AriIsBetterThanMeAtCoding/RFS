@@ -50,7 +50,7 @@ public class TestDriver {
         Route rB = sm.findShortestKmRoute(sm.findLocation("TRUCK001"), sm.findLocation("TRUCK004"), "M");
         System.out.println("\n\nShortest Route:\n " + rB);
 
-        System.out.println("");
+        System.out.println(""); 
 
         //BikeDepot 1 to BikeDepot 3
         System.out.println("------- b1 to b3 ----------");

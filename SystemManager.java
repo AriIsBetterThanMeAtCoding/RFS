@@ -9,7 +9,13 @@ public class SystemManager {
     }
 
     public void addLocation(Location l) {
-        locations.add(l);
+        if(!locations.contains(l)) {
+            locations.add(l);
+        }else {
+            System.out.println("This Location Already Exists");
+            System.exit(0);
+        }
+        
     }
 
     // Postconditions: adds given leg to legs
@@ -58,11 +64,11 @@ public class SystemManager {
         output += "Legs:\n";
         for (Leg l : legs) {
             output += l + ", Available on: " + l.getDaysAvailable() + "\n";
-        }
+        } // for
         output += "\nLocations:\n";
         for (Location loc : locations) {
             output += loc + "\n";
-        }
-    }
+        } // for
+    } // printSystemDetails
 
-}
+} // SystemManager
