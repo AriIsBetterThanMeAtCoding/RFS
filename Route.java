@@ -3,7 +3,9 @@ import java.util.ArrayList;
 public class Route {
     ArrayList<Leg> legs = new ArrayList<Leg>();
 
-    // Postconditions: returns cost of traversing route
+    /*
+     * Postconditions: returns cost of traversing route
+     */
     public double totalCost() {
         double totalCost = 0;
         for (int i = 0; i < legs.size(); i++) {
@@ -13,7 +15,9 @@ public class Route {
         return totalCost;
     } // totalCost
 
-    // Postconditions: returns total distance of route
+    /*
+     * Postconditions: returns total distance of route
+     */
     public int totalDistance() {
         int totalDistance = 0;
         for (int i = 0; i < legs.size(); i++) {
@@ -24,17 +28,23 @@ public class Route {
 
     }// totalDistance
 
-    // Postconditions: returns number of legs in route
+    /*
+     * Postconditions: returns number of legs in route
+     */
     public int totalSteps() {
         return legs.size();
     } // totalSteps
 
-    // Postconditions: adds leg to route
+    /*
+     * Postconditions: adds leg to route
+     */
     public void addLeg(Leg leg) {
         legs.add(leg);
     } // addleg
 
-    // Postconditions: returns copy of this route
+    /*
+     * Postconditions: returns copy of this route
+     */
     public Route clone() {
         Route temp = new Route();
 
@@ -45,7 +55,9 @@ public class Route {
         return temp;
     } // clone
 
-    // Post-Condition: returns whether leg is in the route
+    /*
+     * Post-Condition: returns whether leg is in the route
+     */
     public boolean legInRoute(Leg leg) {
         if (this.legs.contains(leg)) {
 

@@ -18,7 +18,7 @@ public abstract class Location {
     } // addConnection
 
     // Pre-Condition: loc is a created location, day is one day of the weekend,
-    // 1<=func<=3
+    // 1 <= func <= 3
     // Post-Condition: finds all the routes from a location to loc. func will
     // determine what to find after
     public Route bestRouteTo(Location loc, String day, Route current, int func) {
@@ -47,7 +47,8 @@ public abstract class Location {
 
             } // if
         } // for
-
+        
+        // decide optimal route based on parameter func given
         switch (func) {
         case 1:
             return cheapestRouteTo(possRoutes);
@@ -89,7 +90,7 @@ public abstract class Location {
         double minSteps = Double.MAX_VALUE;
         int minIndex = -1;
 
-        // find cheapest possible route
+        // find route w least steps
         for (int i = 0; i < possRoutes.size(); i++) {
             double thisSteps = possRoutes.get(i).totalSteps();
 
@@ -109,7 +110,7 @@ public abstract class Location {
         double minDist = Double.MAX_VALUE;
         int minIndex = -1;
 
-        // find cheapest possible route
+        // find shortest possible route
         for (int i = 0; i < possRoutes.size(); i++) {
             double thisDist = possRoutes.get(i).totalDistance();
 
@@ -121,7 +122,10 @@ public abstract class Location {
 
         return possRoutes.get(minIndex);
     } // shortestKmRouteTo
-
+    
+    /*
+     * Postconditions: returns this location's name
+     */
     public String getName() {
         return name;
     } // getName
@@ -130,7 +134,8 @@ public abstract class Location {
         return name;
     } // toString
 
-    // Post-Condition: determines whether a location is the same as another
+    // Post-Condition: determines whether this location has
+    // the same name as another
     public boolean equals(Location loc) {
         if (name.equals(loc.name))
             return true;
