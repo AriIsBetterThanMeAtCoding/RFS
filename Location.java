@@ -78,7 +78,8 @@ public abstract class Location {
                 minIndex = i;
             } // if
         } // for
-
+        
+        if(minIndex == -1) return null;
         return possRoutes.get(minIndex);
     } // cheapestRouteTo
 
@@ -99,7 +100,8 @@ public abstract class Location {
                 minIndex = i;
             } // if
         } // for
-
+        
+        if(minIndex == -1) return null;
         return possRoutes.get(minIndex);
     } // minStepsRouteTo
     
@@ -120,6 +122,7 @@ public abstract class Location {
             } // if
         } // for
 
+        if(minIndex == -1) return null;
         return possRoutes.get(minIndex);
     } // shortestKmRouteTo
     
