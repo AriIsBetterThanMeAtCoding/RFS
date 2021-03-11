@@ -1,3 +1,11 @@
+/****************************************************************************
+* Name:        Route Finding System
+* Author:      Ari & Robert
+* Date:        March 11, 2021
+* Purpose:     Create transportation networks and finds the best route 
+*              between places
+*****************************************************************************/
+
 public class TestDriver {
 
     public static void main(String[] args) {
