@@ -12,7 +12,7 @@ public class BikeLeg extends Leg {
             System.out.println("Bike leg origin and destinations must be a TruckDepot and BikeDeliveryStation or"
                     + " 2 BikeDeliveryStations");
             System.exit(0);
-        }
+        } // if
         
     } // BikeLeg
 } // BikeLeg

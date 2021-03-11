@@ -10,6 +10,6 @@ public class Airport extends Location {
         if (n.length() != 3) {
             System.out.println("Invalid Airport Name. Airport Name must be 3 characters Long");
             System.exit(0);
-        }
+        } // if
     } // Airport
 } // Airport

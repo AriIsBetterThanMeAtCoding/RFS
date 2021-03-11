@@ -1,21 +1,24 @@
-
 public class TestDriver {
 
     public static void main(String[] args) {
         SystemManager sm = new SystemManager();
+        
+        // bike depots
         Location b1 = new BikeDeliveryLocation("BikeDepot1");
         Location b2 = new BikeDeliveryLocation("BikeDepot2");
         Location b3 = new BikeDeliveryLocation("BikeDepot3");
-
+        
+        // truck depots
         Location t1 = new TruckDepot("TRUCK001");
         Location t2 = new TruckDepot("TRUCK002");
         Location t3 = new TruckDepot("TRUCK003");
         Location t4 = new TruckDepot("TRUCK004");
         
+        // airports
         Location a1 = new Airport("AAA");
         Location a2 = new Airport("BBB");
      
-
+        // add locations to system manager
         sm.addLocation(b1);
         sm.addLocation(b2);
         sm.addLocation(b3);
@@ -26,18 +29,20 @@ public class TestDriver {
         sm.addLocation(a1);
         sm.addLocation(a2);
        
-
+        // add bike legs
         sm.addLeg(new BikeLeg(b1, t3, 1, "MTWRFSU"));
         sm.addLeg(new BikeLeg(t1, b2, 8, "MTWRFSU"));
         sm.addLeg(new BikeLeg(b2, t2, 2, "MTWRFSU"));
         sm.addLeg(new BikeLeg(t4, b3, 2, "MTWRFSU"));
         
+        // add truck legs
         sm.addLeg(new TruckLeg(t1, t2, 11, "MTWRFSU"));
         sm.addLeg(new TruckLeg(t2, a2, 36, "MTWRFSU"));
         sm.addLeg(new TruckLeg(a2, t4, 42, "MTWRFSU"));
         sm.addLeg(new TruckLeg(t2, t4, 120, "MTWRFSU")); 
         sm.addLeg(new TruckLeg(t3, a1, 19, "MTWRFSU"));
         
+        // add flights
         sm.addLeg(new Flight(a1, a2, 221, "MTWRFSU"));
        
         // Testing Error Checking
