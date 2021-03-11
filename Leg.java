@@ -10,7 +10,7 @@ public abstract class Leg {
         
         // check for a valid distance
         if(distanceInKm < 1) {
-            System.out.println("Leg has negative length");
+            System.out.println("Leg has negative distance");
             System.exit(0);
         }
         

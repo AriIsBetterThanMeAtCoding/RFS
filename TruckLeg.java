@@ -10,7 +10,8 @@ public class TruckLeg extends Leg {
 
         if (!isValid) {
             System.out.println(
-                    "TruckLeg did not include the correct destination or origin. We roam from TruckDepot to Airport or Airport to TruckDepot around these ends");
+                    "TruckLeg did not include the correct destination or origin. "
+                    + "We roam from TruckDepot to Airport or Airport to TruckDepot around these ends");
             System.exit(0);
         } // if
     } // TruckLeg
